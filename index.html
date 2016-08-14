@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>贪吃蛇</title>
+  <meta charset="utf-8">
+  <style type="text/css">
+  body{
+    background-color: #cccccc;
+  }
+  #screen{
+  /*margin:auto;*/
+  position:relative; 
+  background:#f0f0f0;
+  box-shadow: 5px 5px 5px #bdbdbd
+  }
+  .snake,#food{
+    border:0px;
+    position:absolute; 
+    width:20px; 
+    height:20px; 
+    background:#bc8f8f;
+    border-radius: 8px 8px 8px 8px;
+  }
+  #snakeHead{
+    border-radius: 15px 15px 15px 15px;
+  }
+  
+  #startBtn {
+    background: url(start.png) no-repeat;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    margin-top: 150px;
+    margin-bottom: 40px;
+  }
+  #pauseBtn{
+    background: url(pause.png) no-repeat;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    display: block;
+    /*margin: 80px;*/
+  }
+  #btnDiv{
+    float: right;
+    width: 200px;
+  }
+  </style>
+</head>
+<body>
+
+<div id="btnDiv">
+  <input id="startBtn" type="button" value="" />
+  <input id="pauseBtn" type="button" value=""/>
+</div>
+
+<div id="screen" tabindex="0" style="width: 1000px;height: 600px;">
+  <div id="snakeHead" name="snake" class="snake" style="top:100px; left:100px;"></div>
+  <div name="snake" class="snake" style="top:100px; left:80px;"></div>
+  <div name="snake" class="snake" style="top:100px; left:60px;"></div>
+  <div name="snake" class="snake" style="top:100px; left:40px;"></div>
+  <div name="snake" class="snake" style="top:100px; left:20px;"></div>
+  <!-- 食物 -->
+  <div id="food" style="top:100px; left:200px; background:#b8860b;"></div>
+</div>  
+<script type="text/javascript" src="mySnakeScript.js"></script>
+</body>
+</html>
